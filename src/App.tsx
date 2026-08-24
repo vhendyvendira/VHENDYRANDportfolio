@@ -151,7 +151,7 @@ export default function App() {
   const activeCS = route.page === "work" ? CASE_STUDIES.find(c => c.slug === route.slug) : null;
 
   const HEADLINE_DATA = { 
-    headline: "Hi, I’m Vhendy —\nProduct Design\n& Builder", 
+    headline: "Hi, I’m Vhendy —\nStartup & Business \n& Enthusiast", 
     subhead: "I don’t just think about products — I build and ship to understand them" 
   };
 
