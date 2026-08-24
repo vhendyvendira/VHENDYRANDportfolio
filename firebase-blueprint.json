@@ -1,0 +1,37 @@
+{
+  "entities": {
+    "siteStats": {
+      "title": "Site Statistics",
+      "description": "General statistics for the website",
+      "type": "object",
+      "properties": {
+        "visitorCount": {
+          "type": "number",
+          "description": "Total number of visits"
+        }
+      },
+      "required": ["visitorCount"]
+    },
+    "uniqueVisitor": {
+      "title": "Unique Visitor",
+      "description": "Record of a unique visitor IP hash",
+      "type": "object",
+      "properties": {
+        "visitedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  },
+  "firestore": {
+    "stats/global": {
+      "schema": "siteStats",
+      "description": "Global statistics for the site"
+    },
+    "uniqueVisitors/{visitorHash}": {
+      "schema": "uniqueVisitor",
+      "description": "Record of unique visitors"
+    }
+  }
+}
